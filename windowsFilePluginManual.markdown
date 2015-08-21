@@ -17,8 +17,8 @@ The resources can contain placeholders that the plugin will replace when targeti
 
 Deploy, upgrade, and undeploy a file based resource on a [Host](#overthere.Host).
 
-* [UnixFile](#file.UnixFile)
-* [UnixFolder](#file.UnixFolder)
+* [WindowsFile](#file.WindowsFile)
+* [WindowsFolder](#file.WindowsFolder)
 
 ## Requirements
 
@@ -32,9 +32,9 @@ Please refer to  [Packaging Manual](https://docs.xebialabs.com/xl-deploy/4.5.x/p
 
 Sample DAR manifest entries defining a file, folder, and archive resource:
 
-    <udm.DeploymentPackage version="1.0" application="UnixFilePluginSample">
-        <file.UnixFile name="sampleFile" file="sampleFile.txt"/>
-        <file.UnixFolder name="sampleFolder" file="sampleFolder" />
+    <udm.DeploymentPackage version="1.0" application="WindowsFilePluginSample">
+        <file.WindwsFile name="sampleFile" file="sampleFile.txt"/>
+        <file.WindowsFolder name="sampleFolder" file="sampleFolder" />
     </udm.DeploymentPackage>
 
 ## Using the deployables and deployeds
@@ -49,10 +49,10 @@ Note that the CIs can only be targeted to containers derived from [Host](#overth
     <th>Deployables</th> <th>Containers</th> <th>Generated Deployed</th>
 </tr>
 <tr>
-	<td>file.UnixFile</td> <td>overthere.Host</td> <td>file.CopiedUnixFile</td>
+	<td>file.WindowsFile</td> <td>overthere.Host</td> <td>file.CopiedWindowsFile</td>
 </tr>
 <tr>
-	<td>file.UnixFolder</td> <td>overthere.Host</td> <td>file.CopiedUnixFolder</td>
+	<td>file.WindowsFolder</td> <td>overthere.Host</td> <td>file.CopiedWindowsFolder</td>
 </tr>
 </table>
 
@@ -70,7 +70,6 @@ The following table describes the effect a deployed has on its container.
 	    <ul>
 	        <li>Create target path on host, if needed</li>
 	        <li>Copy file to target path on host</li>
-	        <li>Set Unix file permissions</li>
 	    </ul>
 	</td>
 	<td>
@@ -82,7 +81,6 @@ The following table describes the effect a deployed has on its container.
 	    <ul>
 	        <li>Delete old file from host</li>
 	        <li>Copy modified file to target path on host</li>
-	        <li>Set Unix file permissions</li>
 	    </ul>
 	</td>
 </tr>
@@ -92,7 +90,6 @@ The following table describes the effect a deployed has on its container.
 	    <ul>
 	        <li>Create target folder on host, if needed</li>
 	        <li>Copy folder content to target folder on host</li>
-	        <li>Set Unix file permissions</li>
 	    </ul>
 	</td>
 	<td>
@@ -105,7 +102,6 @@ The following table describes the effect a deployed has on its container.
 	    <ul>
 	        <li>Perform actions as described by <em>Destroy</em> for old folder</li>
 	        <li>Perform actions as described by <em>Create</em> for modified folder</li>
-	        <li>Set Unix file permissions</li>
 	    </ul>
 	</td>
 </tr>
