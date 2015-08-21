@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+-->
+<synthetic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.xebialabs.com/deployit/synthetic"
+           xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
+
+    <type type="file.CopiedWindowsArtifact" 
+          extends="powershell.ExtensiblePowerShellDeployedArtifact" 
+          container-type="overthere.CifsHost" virtual="true">
+      <property name="targetPath" />
+      <property name="createTargetPath" kind="boolean" required="false" default="false" />
+      <!-- admin properties -->
+      <property name="destroyVerb" hidden="true" default="Delete" />
+    </type>
+
+    <type type="file.CopiedWindowsFile" extends="file.CopiedWindowsArtifact" deployable-type="file.WindowsFile">
+      <generate-deployable type="file.WindowsFile" extends="generic.File" />
+
+      <property name="targetFileName" required="false" />
+      <!-- admin properties -->
+      <property name="targetPathShared" kind="boolean" required="false" hidden="true" default="false" />
+      <property name="createScript" hidden="true" default="windowsFile/create-windows-file.ps1" />
+      <property name="destroyScript" hidden="true" default="windowsFile/destroy-windows-file.ps1" />
+    </type>
+
+    <type type="file.CopiedWindowsFolder" extends="file.CopiedWindowsArtifact" deployable-type="file.WindowsFolder">
+      <generate-deployable type="file.WindowsFolder" extends="file.Folder" />
+
+      <property name="targetPathShared" kind="boolean" required="false" default="true" />
+      <!-- admin properties -->
+      <property name="targetFileName" hidden="true" default="UNUSED" />
+      <property name="createScript" hidden="true" default="windowsFile/create-windows-folder.ps1" />
+      <property name="modifyScript" hidden="true" default="windowsFile/modify-windows-folder.ps1" />
+      <property name="destroyScript" hidden="true" default="windowsFile/destroy-windows-folder.ps1" />
+      <property name="destroyOptions" kind="set_of_string" hidden="true" default="[uploadClasspathResources,uploadArtifactData,exposeDeployedApplication,exposePreviousDeployed]" />
+      <property name="modifyOptions" kind="set_of_string" hidden="true" default="[uploadClasspathResources,uploadArtifactData,exposeDeployedApplication,exposePreviousDeployed]" />
+    </type>
+</synthetic>
