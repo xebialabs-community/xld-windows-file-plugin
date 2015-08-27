@@ -32,6 +32,12 @@ if ( $deployed.targetFileName ) {
 $TARGET_FILE="$targetPath\$TARGET_FILE_NAME"
 Write-Host "Creating $TARGET_FILE"
 Copy-Item -force $deployed.file $TARGET_FILE -verbose
+$deployed.fileProperties.GetEnumerator() | Foreach-Object {
+   $myKey   = $_.Key
+   $myValue = $_.Value
+   Write-Host "$TARGET_FILE set permission $myKey to $myValue"
+   $(Get-Item $TARGET_FILE).($myKey)=$myValue 
+}
 $res=$?
 if ( ! $res ) {
   Write-Host "Problem copying $deployed.file to $TARGET_FILE"

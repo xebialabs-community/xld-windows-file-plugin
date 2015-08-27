@@ -25,6 +25,20 @@ if ( (Test-Path $targetPath) -eq $false ) {
 
 Write-Host "Creating folder $targetPath"
 Copy-Item * $targetPath -force -recurse -verbose
+
+$BASE_DIR = pwd
+$BASE_DIR = "$BASE_DIR\" -replace "\\", "\\"
+$files = Get-ChildItem . -recurse | Where-Object {$_.PSIsContainer -eq $False} | % {$_.FullName}
+ForEach ( $FILE_NAME in $files ) {
+    $SFILE_NAME = $FILE_NAME -replace $BASE_DIR
+    $DFILE_NAME = "$targetPath\$SFILE_NAME"
+    $deployed.fileProperties.GetEnumerator() | Foreach-Object {
+       $myKey   = $_.Key
+       $myValue = $_.Value
+       Write-Host "$DFILE_NAME set permission $myKey to $myValue"
+       $(Get-Item $DFILE_NAME).($myKey)=$myValue 
+    }
+}
 $res=$?
 if ( ! $res ) {
   exit $res

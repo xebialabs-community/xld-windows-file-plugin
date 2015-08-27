@@ -15,6 +15,7 @@ FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALA
       <property name="createTargetPath" kind="boolean" required="false" default="false" />
       <!-- admin properties -->
       <property name="destroyVerb" hidden="true" default="Delete" />
+      <property name="fileProperties" kind="map_string_string" required="false" />
     </type>
 
     <type type="file.CopiedWindowsFile" extends="file.CopiedWindowsArtifact" deployable-type="file.WindowsFile">

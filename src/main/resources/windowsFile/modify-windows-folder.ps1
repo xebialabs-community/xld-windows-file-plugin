@@ -46,11 +46,23 @@ ForEach ( $FILE_NAME in $files ) {
          if ( "$DCKSUM" -ne "$SCKSUM" ) {
             Write-Host "Copy $SFILE_NAME to $DFILE_NAME ( $SCKSUM / $DCKSUM )"
             Copy-Item $SFILE_NAME $DFILE_NAME
+            $deployed.fileProperties.GetEnumerator() | Foreach-Object {
+               $myKey   = $_.Key
+               $myValue = $_.Value
+               Write-Host "$DFILE_NAME set permission $myKey to $myValue"
+               $(Get-Item $DFILE_NAME).($myKey)=$myValue 
+            }
          }
     } else {
          Write-Host "Copy $SFILE_NAME to $DFILE_NAME"
          New-Item -ItemType File -Path $DFILE_NAME
          Copy-Item $SFILE_NAME $DFILE_NAME
+         $deployed.fileProperties.GetEnumerator() | Foreach-Object {
+            $myKey   = $_.Key
+            $myValue = $_.Value
+            Write-Host "$DFILE_NAME set permission $myKey to $myValue"
+            $(Get-Item $DFILE_NAME).($myKey)=$myValue 
+         }
     }
 }
 $res=$?

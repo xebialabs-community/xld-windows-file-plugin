@@ -1,5 +1,5 @@
 defaultTasks 'build'
-version = '1.0.0-beta'
+version = '1.0.1-beta'
 
 import org.apache.tools.ant.filters.*
 apply plugin: "com.github.hierynomus.license"
