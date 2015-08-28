@@ -35,7 +35,7 @@ The list of potential file properties are as follows:
 
 | Property          | Example Value          |
 |-------------------|------------------------|
-| Mode              | -a---                  |
+| Mode              | -a--- (darhs)          |
 | IsReadOnly        | False                  |
 | CreationTime      | 8/17/2009 9:28:43 AM   |
 | CreationTimeUtc   | 8/17/2009 1:28:43 PM   |
@@ -44,6 +44,16 @@ The list of potential file properties are as follows:
 | LastWriteTime     | 12/17/2010 5:08:38 PM  |
 | LastWriteTimeUtc  | 12/17/2010 10:08:38 PM |
 | Attributes        | Archive                |
+
+The list of potential file modes are as follows:
+
+|    |   Mode    |
+|----|-----------|
+| d  | Directory |
+| a  | Archive   |
+| r  | Read-only |
+| h  | Hidden    |
+| s  | System    |
 
 The list of potential file attributes are as follows:
 
@@ -80,3 +90,4 @@ The list of potential file attributes are as follows:
 ## References ##
 * [Use a PowerShell Cmdlet to Work with File Attributes](http://blogs.technet.com/b/heyscriptingguy/archive/2011/01/26/use-a-powershell-cmdlet-to-work-with-file-attributes.aspx)
 * [File Attributes in PowerShell](https://mcpmag.com/articles/2012/03/20/powershell-dir-command-tricks.aspx)
+* [What are the possible Mode values returned by Powershell's Get-ChildItem cmdlet?](http://stackoverflow.com/questions/4939802/what-are-the-possible-mode-values-returned-by-powershells-get-childitem-cmdlet)
