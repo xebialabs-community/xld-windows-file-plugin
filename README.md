@@ -31,6 +31,41 @@ When copying new artifacts to the target it is possible to set properties (attri
 
 `$(Get-Item <filename> ).<property key>=<property value>`
 
+The list of potential file properties are as follows:
+
+| Property          | Example Value          |
+|-------------------|------------------------|
+| Mode              | -a---                  |
+| IsReadOnly        | False                  |
+| CreationTime      | 8/17/2009 9:28:43 AM   |
+| CreationTimeUtc   | 8/17/2009 1:28:43 PM   |
+| LastAccessTime    | 8/22/2009 6:13:01 PM   |
+| LastAccessTimeUtc | 8/22/2009 10:13:01 PM  |
+| LastWriteTime     | 12/17/2010 5:08:38 PM  |
+| LastWriteTimeUtc  | 12/17/2010 10:08:38 PM |
+| Attributes        | Archive                |
+
+The list of potential file attributes are as follows:
+
+
+| Attribute         |
+| ----------------- |
+| ReadOnly          |
+| Hidden            |
+| System            |
+| Directory         |
+| Archive           |
+| Device            |
+| Normal            |
+| Temporary         |
+| SparseFile        |
+| ReparsePoint      |
+| Compressed        |
+| Offline           |
+| NotContentIndexed |
+| Encrypted         |
+
+
 ## File.WindowsFolder Example ##
 
 
@@ -41,3 +76,7 @@ When copying new artifacts to the target it is possible to set properties (attri
 
 ![image](docs/WindowsFile.FileType.png)
 
+
+## References ##
+* [Use a PowerShell Cmdlet to Work with File Attributes](http://blogs.technet.com/b/heyscriptingguy/archive/2011/01/26/use-a-powershell-cmdlet-to-work-with-file-attributes.aspx)
+* [File Attributes in PowerShell](https://mcpmag.com/articles/2012/03/20/powershell-dir-command-tricks.aspx)
