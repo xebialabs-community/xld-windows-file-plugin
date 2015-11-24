@@ -39,7 +39,7 @@ if ( $deployed.targetPathShared ) {
      }
 } else {
      Write-Host "Deleting folder $targetPath"
-     if ( (Test-Path $FILE_TO_DELETE) -eq $true ) {
+     if ( (Test-Path $targetPath) -eq $true ) {
           Remove-Item $targetPath -force -recurse -ErrorAction Continue
      }
 }
