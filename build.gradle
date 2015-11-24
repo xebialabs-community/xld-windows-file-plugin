@@ -1,38 +1,24 @@
+plugins {
+    id "com.github.hierynomus.license" version "0.11.0"
+    id "com.xebialabs.xldp" version "1.0.5"
+}
+
 defaultTasks 'build'
 version = '1.0.3-beta'
 
 import org.apache.tools.ant.filters.*
-apply plugin: "com.github.hierynomus.license"
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
 
 group = 'com.xebialabs.deployit.community'
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
-def apiVersion = '5.0.1'
-def xldeployHome = "$System.env.XLDEPLOY_HOME"
-
-buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath "nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0"
-  }
-}
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 repositories {
   mavenLocal()
   mavenCentral()
-  maven {
-      credentials {
-            username 'community-plugins'
-            password 'community'
-        }
-      url 'http://nexus.xebialabs.com/nexus/content/repositories/releases'
-    }
 }
 
  

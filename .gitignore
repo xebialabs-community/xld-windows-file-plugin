@@ -1,3 +1,5 @@
 .gradle
+.idea
 build
 *swp
+windows-file-plugin.iml
