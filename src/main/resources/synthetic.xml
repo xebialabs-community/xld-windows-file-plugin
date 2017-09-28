@@ -9,35 +9,39 @@ FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALA
            xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
 
     <type type="file.CopiedWindowsArtifact" 
-          extends="powershell.ExtensiblePowerShellDeployedArtifact" 
+          extends="powershell.ExtensiblePowerShellDeployedArtifact"
           container-type="overthere.CifsHost" virtual="true">
       <property name="targetPath" />
       <property name="createTargetPath" kind="boolean" required="false" default="false" />
       <!-- admin properties -->
+       <!--
       <property name="destroyVerb" hidden="true" default="Delete" />
+      -->
       <property name="fileProperties" kind="map_string_string" required="false" />
     </type>
 
-    <type type="file.CopiedWindowsFile" extends="file.CopiedWindowsArtifact" deployable-type="file.WindowsFile">
-      <generate-deployable type="file.WindowsFile" extends="generic.File" />
-
-      <property name="targetFileName" required="false" />
-      <!-- admin properties -->
-      <property name="targetPathShared" kind="boolean" required="false" hidden="true" default="false" />
-      <property name="createScript" hidden="true" default="windowsFile/create-windows-file.ps1" />
-      <property name="destroyScript" hidden="true" default="windowsFile/destroy-windows-file.ps1" />
+    <type type="file.CopiedWindowsFile"
+          extends="udm.BaseDeployedArtifact"
+          deployable-type="file.WindowsFile"
+          container-type="overthere.CifsHost" >
+      <generate-deployable type="file.WindowsFile" extends="udm.BaseDeployableFileArtifact" />
+      <property name="targetPath"       kind="string"            required="true"/>
+      <property name="targetPathShared" kind="boolean"           required="false" default="true" />
+      <property name="createTargetPath" kind="boolean"           required="false" default="false" />
+      <property name="fileProperties"   kind="map_string_string" required="false" />
+      <property name="targetFileName"   kind="string"            required="false" />
     </type>
 
-    <type type="file.CopiedWindowsFolder" extends="file.CopiedWindowsArtifact" deployable-type="file.WindowsFolder">
-      <generate-deployable type="file.WindowsFolder" extends="file.Folder" />
 
-      <property name="targetPathShared" kind="boolean" required="false" default="true" />
-      <!-- admin properties -->
-      <property name="targetFileName" hidden="true" default="UNUSED" />
-      <property name="createScript" hidden="true" default="windowsFile/create-windows-folder.ps1" />
-      <property name="modifyScript" hidden="true" default="windowsFile/modify-windows-folder.ps1" />
-      <property name="destroyScript" hidden="true" default="windowsFile/destroy-windows-folder.ps1" />
-      <property name="destroyOptions" kind="set_of_string" hidden="true" default="[uploadClasspathResources,uploadArtifactData,exposeDeployedApplication,exposePreviousDeployed]" />
-      <property name="modifyOptions" kind="set_of_string" hidden="true" default="[uploadClasspathResources,uploadArtifactData,exposeDeployedApplication,exposePreviousDeployed]" />
+    <type type="file.CopiedWindowsFolder"
+          extends="udm.BaseDeployedArtifact"
+          deployable-type="file.WindowsFolder"
+          container-type="overthere.CifsHost" >
+      <generate-deployable type="file.WindowsFolder" extends="udm.BaseDeployableFolderArtifact" />
+      <property name="targetPath"       kind="string"            required="true"/>
+      <property name="targetPathShared" kind="boolean"           required="false" default="true" />
+      <property name="createTargetPath" kind="boolean"           required="false" default="false" />
+      <property name="fileProperties"   kind="map_string_string" required="false" />
+      <property name="targetFileName"   hidden="true" default="UNUSED" />
     </type>
 </synthetic>
