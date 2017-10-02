@@ -9,18 +9,6 @@
            xmlns="http://www.xebialabs.com/deployit/synthetic"
            xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
 
-    <type type="file.CopiedWindowsArtifact" 
-          extends="powershell.ExtensiblePowerShellDeployedArtifact"
-          container-type="overthere.CifsHost" virtual="true">
-      <property name="targetPath" />
-      <property name="createTargetPath" kind="boolean" required="false" default="false" />
-      <!-- admin properties -->
-       <!--
-      <property name="destroyVerb" hidden="true" default="Delete" />
-      -->
-      <property name="fileProperties" kind="map_string_string" required="false" />
-    </type>
-
     <type type="file.CopiedWindowsFile"
           extends="udm.BaseDeployedArtifact"
           deployable-type="file.WindowsFile"
