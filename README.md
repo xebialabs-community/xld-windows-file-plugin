@@ -2,12 +2,17 @@
 
 [![Build Status][xld-windows-file-plugin-travis-image]][xld-windows-file-plugin-travis-url]
 [![Codacy Badge][xld-windows-file-plugin-codacy-image] ][xld-windows-file-plugin-codacy-url]
+[![License: MIT][xld-windows-file-plugin-license-image] ][xld-windows-file-plugin-license-url]
+[![Github All Releases][xld-windows-file-plugin-downloads-image] ]()
 
 [xld-windows-file-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xld-windows-file-plugin.svg?branch=master
 [xld-windows-file-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xld-windows-file-plugin
 [xld-windows-file-plugin-codacy-image]: https://api.codacy.com/project/badge/Grade/cbe6e057aa2f447c9d6e4a3092f192ad
 [xld-windows-file-plugin-codacy-url]: https://www.codacy.com/app/joris-dewinne/xld-windows-file-plugin
 [xld-windows-file-plugin-code-climate-image]: https://codeclimate.com/github/xebialabs-community/xld-windows-file-plugin/badges/gpa.svg
+[xld-windows-file-plugin-license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
+[xld-windows-file-plugin-license-url]: https://opensource.org/licenses/MIT
+[xld-windows-file-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/xld-windows-file-plugin/total.svg
 
 # Overview
 

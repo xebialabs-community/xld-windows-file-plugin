@@ -4,7 +4,7 @@ deploy:
   provider: releases
   api_key:
     secure: xXLstwDqMzbRnCKa6ojg6DWfyBp4tnQqr+TvsIm9cRDxLUtHeaSVMJ1LtNqtFfkaFk9IlvYfjuCslR5uMRR57iFwfl2O940yPDuJJ/TAIsuwAjG2zXBetjvfWHO539SCdVKBA+8f0zagxMCWbp5+PzsJ0zJEAVo5FAuraH30iBKmZ6MKiCayeyYkrOEsYT+L5FtGA9ZaC7w9DLjRKgdj9qRsXyRbDHjrAcOl1Co1zTKS9PzDgJdzG2RGDc0TGtqGkP9BacP94jUInGKoriW0VR/N6HCiFkfWR9IYMjHQPDPaHH+XffNvwjv8Xl38ltabNo+0KP2JPzs8bQk4Pc+da/GvuW385Vv9GxWMx37CEA1pGAlyquB/qQH5iOIZXBIzWXO+jJKFWKYY85RzugHuCQ9BPkCv227vm57PIoWRIeafh0PWtUVmZqo71waWptR7skE05Azhds/Khm7yST3IylMLgNFMmQ07UPI3jGBSz5CRpqysv+SxXdO/Dso3YdTt9ILWHLC5gWm5nEePxfxVjdPAHAmg9nwLvcjgA95QQcz2eyzibm7PGyhgkujxgYenOIh+3ScgMGcrSTF4ttXCc18XbXPEZf6BqxIAoR5sqZr0ERvlj2zFwE0y+d+O8XJGcBYSxgVHdjXb7Oj2wn+QtRj2noBGYR/kFIEcmLdvpNg=
-  file: build/distibutions/windows-file-plugin-1.0.4.xldp
+  file: build/distibutions/windows-file-plugin-2.0.0.xldp
   on:
     all_branches: true
     tags: true
