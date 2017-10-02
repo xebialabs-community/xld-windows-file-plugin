@@ -2,14 +2,12 @@
 
 [![Build Status][xld-windows-file-plugin-travis-image]][xld-windows-file-plugin-travis-url]
 [![Codacy Badge][xld-windows-file-plugin-codacy-image] ][xld-windows-file-plugin-codacy-url]
-[![Code Climate][xld-windows-file-plugin-code-climate-image] ][xld-windows-file-plugin-code-climate-url]
 
 [xld-windows-file-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xld-windows-file-plugin.svg?branch=master
 [xld-windows-file-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xld-windows-file-plugin
 [xld-windows-file-plugin-codacy-image]: https://api.codacy.com/project/badge/Grade/cbe6e057aa2f447c9d6e4a3092f192ad
 [xld-windows-file-plugin-codacy-url]: https://www.codacy.com/app/joris-dewinne/xld-windows-file-plugin
 [xld-windows-file-plugin-code-climate-image]: https://codeclimate.com/github/xebialabs-community/xld-windows-file-plugin/badges/gpa.svg
-[xld-windows-file-plugin-code-climate-url]: https://codeclimate.com/github/xebialabs-community/xld-windows-file-plugin
 
 # Overview
 
