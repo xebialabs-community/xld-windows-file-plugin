@@ -19,35 +19,12 @@
       <dependencyResolution>LATEST</dependencyResolution>
       <undeployDependencies>false</undeployDependencies>
     </udm.DeploymentPackage>
-    <udm.DeploymentPackage id="Applications/smbWindowsFolder/1.0.0" created-by="admin" created-at="2017-09-28T16:08:50.679+0000" last-modified-by="admin" last-modified-at="2017-09-28T16:08:50.679+0000">
-      <orchestrator />
-      <applicationDependencies />
-      <dependencyResolution>LATEST</dependencyResolution>
-      <undeployDependencies>false</undeployDependencies>
-    </udm.DeploymentPackage>
     <udm.DeploymentPackage id="Applications/windowsFolder/1.1.0" created-by="admin" created-at="2017-09-28T14:58:58.097+0000" last-modified-by="admin" last-modified-at="2017-09-28T14:58:58.097+0000">
       <orchestrator />
       <applicationDependencies />
       <dependencyResolution>LATEST</dependencyResolution>
       <undeployDependencies>false</undeployDependencies>
     </udm.DeploymentPackage>
-    <udm.DeploymentPackage id="Applications/smbWindowsFolder/1.1.0" created-by="admin" created-at="2017-09-28T16:12:06.112+0000" last-modified-by="admin" last-modified-at="2017-09-28T16:12:06.112+0000">
-      <orchestrator />
-      <applicationDependencies />
-      <dependencyResolution>LATEST</dependencyResolution>
-      <undeployDependencies>false</undeployDependencies>
-    </udm.DeploymentPackage>
-    <file.SmbWindowsFolder id="Applications/smbWindowsFolder/1.0.0/SmbWindowsFolder" created-by="admin" created-at="2017-09-28T16:08:50.687+0000" last-modified-by="admin" last-modified-at="2017-09-28T16:08:50.687+0000" file="Applications/smbWindowsFolder/1.0.0/SmbWindowsFolder/testFiles-1.0.0.zip">
-      <tags />
-      <scanPlaceholders>true</scanPlaceholders>
-      <placeholders />
-      <checksum>1dc14f4228f7731c5254be8f2ec7761d9b8452de</checksum>
-      <fileUri>jcr:testFiles-1.0.0.zip</fileUri>
-      <targetPath>D:\windowsFiles</targetPath>
-      <targetPathShared>true</targetPathShared>
-      <createTargetPath>true</createTargetPath>
-      <fileProperties />
-    </file.SmbWindowsFolder>
     <file.WindowsFolder id="Applications/windowsFolder/1.1.0/WindowsFolder" created-by="admin" created-at="2017-09-28T14:58:58.114+0000" last-modified-by="admin" last-modified-at="2017-09-28T14:58:58.114+0000" file="Applications/windowsFolder/1.1.0/WindowsFolder/testFiles-1.1.0.zip">
       <tags />
       <scanPlaceholders>true</scanPlaceholders>
@@ -110,20 +87,6 @@
       <dictionaries />
       <triggers />
     </udm.Environment>
-    <file.SmbWindowsFolder id="Applications/smbWindowsFolder/1.1.0/smbWindowsFolder" created-by="admin" created-at="2017-09-28T16:12:06.117+0000" last-modified-by="admin" last-modified-at="2017-09-28T16:12:06.117+0000" file="Applications/smbWindowsFolder/1.1.0/smbWindowsFolder/testFiles-1.1.0.zip">
-      <tags />
-      <scanPlaceholders>true</scanPlaceholders>
-      <placeholders />
-      <checksum>de111abd271207af614180d2526839f831375181</checksum>
-      <fileUri>jcr:testFiles-1.1.0.zip</fileUri>
-      <targetPath>D:\windowsFiles</targetPath>
-      <targetPathShared>true</targetPathShared>
-      <createTargetPath>true</createTargetPath>
-      <fileProperties />
-    </file.SmbWindowsFolder>
-    <udm.Application id="Applications/smbWindowsFolder" created-by="admin" created-at="2017-09-28T16:08:50.677+0000" last-modified-by="admin" last-modified-at="2017-09-28T16:12:06.271+0000">
-      <lastVersion>1.1.0</lastVersion>
-    </udm.Application>
     <file.WindowsFile id="Applications/windowsFolder/1.0.0/synthetic.xml" created-by="admin" created-at="2017-09-28T14:58:58.117+0000" last-modified-by="admin" last-modified-at="2017-09-28T14:58:58.117+0000" file="Applications/windowsFolder/1.0.0/synthetic.xml/synthetic.xml">
       <tags />
       <scanPlaceholders>true</scanPlaceholders>

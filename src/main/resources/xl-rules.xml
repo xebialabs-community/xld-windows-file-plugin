@@ -10,7 +10,6 @@
 
    <rule name="createWindowsFolder" scope="deployed">
       <conditions>
-         <type>file.SmbCopiedWindowsFolder</type>
          <type>file.CopiedWindowsFolder</type>
          <operation>CREATE</operation>
       </conditions>
@@ -26,7 +25,6 @@
 
    <rule name="updateWindowsFolder" scope="deployed">
       <conditions>
-         <type>file.SmbCopiedWindowsFolder</type>
          <type>file.CopiedWindowsFolder</type>
          <operation>MODIFY</operation>
       </conditions>
@@ -42,7 +40,6 @@
 
    <rule name="distroyWindowsFolder" scope="deployed">
       <conditions>
-         <type>file.SmbCopiedWindowsFolder</type>
          <type>file.CopiedWindowsFolder</type>
          <operation>DESTROY</operation>
          <operation>MODIFY</operation>

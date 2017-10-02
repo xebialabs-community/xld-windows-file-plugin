@@ -12,7 +12,7 @@
     <type type="file.CopiedWindowsFile"
           extends="udm.BaseDeployedArtifact"
           deployable-type="file.WindowsFile"
-          container-type="overthere.CifsHost" >
+          container-type="overthere.BaseSmbHost" >
       <generate-deployable type="file.WindowsFile" extends="udm.BaseDeployableFileArtifact" />
       <property name="targetPath"       kind="string"            required="true"/>
       <property name="targetPathShared" kind="boolean"           required="false" default="true" />
@@ -21,22 +21,10 @@
       <property name="targetFileName"   kind="string"            required="false" />
     </type>
 
-    <type type="file.SmbCopiedWindowsFolder"
-          extends="udm.BaseDeployedArtifact"
-          deployable-type="file.SmbWindowsFolder"
-          container-type="overthere.SmbHost" >
-      <generate-deployable type="file.SmbWindowsFolder" extends="udm.BaseDeployableFolderArtifact" />
-      <property name="targetPath"       kind="string"            required="true"/>
-      <property name="targetPathShared" kind="boolean"           required="false" default="true" />
-      <property name="createTargetPath" kind="boolean"           required="false" default="false" />
-      <property name="fileProperties"   kind="map_string_string" required="false" />
-      <property name="targetFileName"   hidden="true" default="UNUSED" />
-    </type>
-
    <type type="file.CopiedWindowsFolder"
          extends="udm.BaseDeployedArtifact"
          deployable-type="file.WindowsFolder"
-         container-type="overthere.CifsHost" >
+         container-type="overthere.BaseSmbHost" >
       <generate-deployable type="file.WindowsFolder" extends="udm.BaseDeployableFolderArtifact" />
       <property name="targetPath"       kind="string"            required="true"/>
       <property name="targetPathShared" kind="boolean"           required="false" default="true" />
