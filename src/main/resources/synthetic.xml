@@ -32,16 +32,28 @@ FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALA
       <property name="targetFileName"   kind="string"            required="false" />
     </type>
 
-
-    <type type="file.CopiedWindowsFolder"
+    <type type="file.SmbCopiedWindowsFolder"
           extends="udm.BaseDeployedArtifact"
-          deployable-type="file.WindowsFolder"
-          container-type="overthere.CifsHost" >
-      <generate-deployable type="file.WindowsFolder" extends="udm.BaseDeployableFolderArtifact" />
+          deployable-type="file.SmbWindowsFolder"
+          container-type="overthere.SmbHost" >
+      <generate-deployable type="file.SmbWindowsFolder" extends="udm.BaseDeployableFolderArtifact" />
       <property name="targetPath"       kind="string"            required="true"/>
       <property name="targetPathShared" kind="boolean"           required="false" default="true" />
       <property name="createTargetPath" kind="boolean"           required="false" default="false" />
       <property name="fileProperties"   kind="map_string_string" required="false" />
       <property name="targetFileName"   hidden="true" default="UNUSED" />
     </type>
+
+   <type type="file.CopiedWindowsFolder"
+         extends="udm.BaseDeployedArtifact"
+         deployable-type="file.WindowsFolder"
+         container-type="overthere.CifsHost" >
+      <generate-deployable type="file.WindowsFolder" extends="udm.BaseDeployableFolderArtifact" />
+      <property name="targetPath"       kind="string"            required="true"/>
+      <property name="targetPathShared" kind="boolean"           required="false" default="true" />
+      <property name="createTargetPath" kind="boolean"           required="false" default="false" />
+      <property name="fileProperties"   kind="map_string_string" required="false" />
+      <property name="targetFileName"   hidden="true" default="UNUSED" />
+   </type>
+
 </synthetic>

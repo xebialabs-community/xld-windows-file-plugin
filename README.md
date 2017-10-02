@@ -1,19 +1,30 @@
-# Windows File plugin #
+# XL Deploy Windows File plugin
 
-# Overview #
+[![Build Status][xld-windows-file-plugin-travis-image]][xld-windows-file-plugin-travis-url]
+[![Codacy Badge][xld-windows-file-plugin-codacy-image] ][xld-windows-file-plugin-codacy-url]
+[![Code Climate][xld-windows-file-plugin-code-climate-image] ][xld-windows-file-plugin-code-climate-url]
+
+[xld-windows-file-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xld-windows-file-plugin.svg?branch=master
+[xld-windows-file-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xld-windows-file-plugin
+[xld-windows-file-plugin-codacy-image]: https://api.codacy.com/project/badge/Grade/cbe6e057aa2f447c9d6e4a3092f192ad
+[xld-windows-file-plugin-codacy-url]: https://www.codacy.com/app/joris-dewinne/xld-windows-file-plugin
+[xld-windows-file-plugin-code-climate-image]: https://codeclimate.com/github/xebialabs-community/xld-windows-file-plugin/badges/gpa.svg
+[xld-windows-file-plugin-code-climate-url]: https://codeclimate.com/github/xebialabs-community/xld-windows-file-plugin
+
+# Overview
 
 The Windows file plugin allows you to manage files and folders copied on Windows systems
 
-# Requirements #
+# Requirements 
 
-* **Deployit requirements**
-	* **Deployit**: version 4.7
+* **XL Deploy requirements**
+	* **XL Deploy**: version 7.x
 
-# Installation #
+# Installation 
 
 Place the plugin JAR file into your `SERVER_HOME/plugins` directory. 
 
-# Features #
+# Features 
 
 The Windows file plugin provides most of the same features as the Unix File plugin for Windows.  Some of the useful features are as follows:
 
@@ -21,7 +32,7 @@ The Windows file plugin provides most of the same features as the Unix File plug
 * Conditional updates of files based on check sums
 * Ability to set addributes on files
 
-# Examples #
+# Examples
 
 There are two basic types that this plugin supports as follows:
 * File.WindowsFolder
@@ -76,18 +87,18 @@ The list of potential file attributes are as follows:
 | Encrypted         |
 
 
-## File.WindowsFolder Example ##
+## File.WindowsFolder Example
 
 
 ![image](docs/WindowsFile.FolderType.png)
 
-## File.WindowsFile Example ##
+## File.WindowsFile Example
 
 
 ![image](docs/WindowsFile.FileType.png)
 
 
-## References ##
+## References
 * [Use a PowerShell Cmdlet to Work with File Attributes](http://blogs.technet.com/b/heyscriptingguy/archive/2011/01/26/use-a-powershell-cmdlet-to-work-with-file-attributes.aspx)
 * [File Attributes in PowerShell](https://mcpmag.com/articles/2012/03/20/powershell-dir-command-tricks.aspx)
 * [What are the possible Mode values returned by Powershell's Get-ChildItem cmdlet?](http://stackoverflow.com/questions/4939802/what-are-the-possible-mode-values-returned-by-powershells-get-childitem-cmdlet)
