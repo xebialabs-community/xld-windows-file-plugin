@@ -23,7 +23,7 @@ if ( (Test-Path $targetPath) -eq $false ) {
 }
 
 if ( $deployed.targetFileName ) {
-    Write-Host "Setting TARGET_FILE_NAME to deployed.targetFileName"
+    Write-Host "Setting TARGET_FILE_NAME to $deployed.targetFileName"
     $TARGET_FILE_NAME=$deployed.targetFileName
 } else {
     Write-Host "Setting TARGET_FILE_NAME to deployed.name"

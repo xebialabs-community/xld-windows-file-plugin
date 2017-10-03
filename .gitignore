@@ -3,3 +3,4 @@
 build
 *swp
 windows-file-plugin.iml
+supervisord*
