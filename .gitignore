@@ -2,5 +2,5 @@
 .idea
 build
 *swp
-windows-file-plugin.iml
 supervisord*
+xld-windows-file-plugin.iml
