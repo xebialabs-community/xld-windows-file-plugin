@@ -5,7 +5,7 @@ deploy:
   api_key:
     secure: stmqGc6uabN87it1YE6SLGehyUomO4ehBec3NWWQyjLlMgp+sWjLwIEehSviIb88KAnUDpJ9aHW012sZK5GEoq7xtQRseWD4A6G+fb9fCAS9o1BCZIlEcTYQG0aBtbSlyPuPbDW9bRGQ/L5Wj1JHcFB78P1b3qnMap0c0Z5pLRokb73zzSOCORvmEic8VeoYtXjIn/NXzdxkSAe07OhH2RhbxOq0IUd6BdRpUGpCj2iD2G7zHNL7gg+NdKpLC20bYrAz913VGBhK//0ujrfkRGSVnb1Pz64nZP91bLYHPD0luiGi/4o2HFY3UYmSARNJz+3/uy8lXwa9NR5wLq5BhqTRzn/TRH1PQlJbybjk7/YO8d2xHvOWF8ZR/FB2hUM3Nkwzxo9al479QCiM/lmKyTjXkj68oqJiCchyZcc/fmPVLwQ9nTzB5OQBcZZbaHTW+6hqTefq3e0IIFtxFc6JdAbLvCFqxr647/8ltJqtVCKhoHAnP7xpPyx5lNmlrBiJVMzbxZMvEwI95lntUxUS14eDhwhVIWV7WmvHUGkreUytVwyRTzuacuLQaZz8ZtMdEfm8rBN5JyDIOf3c+9TyoMfc6vr0auGq8X26Ch24NtV0/gFZarEVwCWz2tR1gP52zJN1EssF45dCB/I20R1bge/Hmj9w84AepVEM5fqjBGU=
   file_glob: true
-  file: build/distibutions/*
+  file: build/distributions/*
   skip_cleanup: true
   on:
     all_branches: true
